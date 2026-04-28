@@ -12,29 +12,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&display=swap" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2394ABF9'/%3E%3C/svg%3E" />
-  <script>
-    if (sessionStorage.getItem('lr_authed') === 'true') {
-      document.documentElement.classList.add('lr-authed');
-    }
-  </script>
 </head>
 <body>
   <a href="#main" class="skip">Skip to content</a>
-
-  <!-- Password gate -->
-  <div class="lr-gate" data-gate>
-    <div class="lr-gate-card">
-      <span class="lr-gate-eyebrow">Protected case study</span>
-      <h1 class="lr-gate-title">A few <span class="italic-accent">behind-the-scenes</span> details.</h1>
-      <p class="lr-gate-sub">Enter the password to view the case study.</p>
-      <form class="lr-gate-form" data-gate-form>
-        <input type="password" class="lr-gate-input" data-gate-input placeholder="Password" required aria-label="Password" autocomplete="off" />
-        <button type="submit" class="btn btn-primary">Unlock <span class="arrow">→</span></button>
-      </form>
-      <p class="lr-gate-error" data-gate-error hidden>That's not the password. Try again.</p>
-      <p class="lr-gate-help">Need the password? <a href="mailto:lisarichter1213@gmail.com?subject=Portfolio password">Reach out</a>.</p>
-    </div>
-  </div>
 
   <header class="nav" id="nav">
     <a href="../index.html" class="nav-brand"><span class="dot" aria-hidden="true"></span>Lisa Richter</a>
@@ -299,32 +279,5 @@
   </footer>
 
   <script src="../script.js" defer></script>
-  <script>
-    (function () {
-      var gate = document.querySelector('[data-gate]');
-      if (!gate) return;
-      if (sessionStorage.getItem('lr_authed') === 'true') {
-        gate.style.display = 'none';
-        return;
-      }
-      var form = document.querySelector('[data-gate-form]');
-      var input = document.querySelector('[data-gate-input]');
-      var err = document.querySelector('[data-gate-error]');
-      if (input) setTimeout(function () { input.focus(); }, 50);
-      if (!form) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (input.value === '2026Richter') {
-          sessionStorage.setItem('lr_authed', 'true');
-          document.documentElement.classList.add('lr-authed');
-          gate.style.display = 'none';
-        } else {
-          err.hidden = false;
-          input.value = '';
-          input.focus();
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
