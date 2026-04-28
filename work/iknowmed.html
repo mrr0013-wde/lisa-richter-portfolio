@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iKnowMed G2, Redesigned · Lisa Richter</title>
+  <meta name="description" content="The iKnowMed G2 oncology EHR redesign at Ontada (McKesson). Rebuilding a regulated clinical product around the user's workflow, not feature by feature." />
+  <meta name="theme-color" content="#FAFAF7" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&display=swap" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2394ABF9'/%3E%3C/svg%3E" />
+  <script>
+    if (sessionStorage.getItem('lr_authed') === 'true') {
+      document.documentElement.classList.add('lr-authed');
+    }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- Password gate -->
+  <div class="lr-gate" data-gate>
+    <div class="lr-gate-card">
+      <span class="lr-gate-eyebrow">Protected case study</span>
+      <h1 class="lr-gate-title">A few <span class="italic-accent">behind-the-scenes</span> details.</h1>
+      <p class="lr-gate-sub">Enter the password to view the case study.</p>
+      <form class="lr-gate-form" data-gate-form>
+        <input type="password" class="lr-gate-input" data-gate-input placeholder="Password" required aria-label="Password" autocomplete="off" />
+        <button type="submit" class="btn btn-primary">Unlock <span class="arrow">→</span></button>
+      </form>
+      <p class="lr-gate-error" data-gate-error hidden>That's not the password. Try again.</p>
+      <p class="lr-gate-help">Need the password? <a href="mailto:lisarichter1213@gmail.com?subject=Portfolio password">Reach out</a>.</p>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="../index.html" class="nav-brand"><span class="dot" aria-hidden="true"></span>Lisa Richter</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../creative.html">Creative</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Case Study · 02 / 03</span>
+
+        <h1 class="reveal mt-6" style="max-width: 18ch;">
+          iKnowMed, redesigned around the <span class="italic-accent">workflow.</span>
+        </h1>
+
+        <p class="lede reveal mt-6" style="max-width: 60ch;">
+          iKnowMed G2 had the oncology functionality, but it was scoring behind OncoEMR, Epic Beacon, and even McKesson's previous EHR on KLAS rankings. We rebuilt it on a new tech stack with a UI organized by what oncologists actually do, not by what features happened to ship.
+        </p>
+
+        <div class="cs-meta-row reveal">
+          <div></div>
+          <div>
+            <div class="k">Company</div>
+            <div class="v">Ontada · McKesson</div>
+          </div>
+          <div>
+            <div class="k">Role</div>
+            <div class="v">Senior UX/UI Designer</div>
+          </div>
+          <div>
+            <div class="k">Timeline</div>
+            <div class="v">8 months</div>
+          </div>
+          <div>
+            <div class="k">Surfaces I led</div>
+            <div class="v">Dashboard · Visit List · My Profile · For Me</div>
+          </div>
+        </div>
+
+        <div class="mockup mockup--md reveal">
+          <img src="../images/ikm4%20main-hero%20image.jpg" alt="Hero visual of the iKnowMed G2 redesign" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 0;">
+      <div class="container">
+
+        <div class="cs-section">
+          <div class="num">01</div>
+          <div class="label">Problem &amp;<br/>Context</div>
+          <div class="body">
+            <h2>The functionality was there. The form wasn't.</h2>
+            <p>iKnowMed G2 delivered the oncology functionality clinicians needed. The problem was using it. Too many clicks. Too much navigation. Too much cognitive load on physicians who were already operating at the edge of their capacity. The result showed up everywhere: physician burnout, KLAS rankings behind every meaningful competitor, and competitive risk that was getting harder to ignore.</p>
+            <p>The redesign needed to do two things at once. Deliver new functionality aligned with Ontada's strategy (Clinical Trials and Precision Medicine), and rebuild the UI on a new tech stack so the product actually felt like something a doctor would want to use.</p>
+
+            <div class="callout">
+              <div class="label">The framing</div>
+              <p>iKnowMed had been designed feature by feature, not workflow by workflow. The redesign inverted that, starting with how oncologists actually move through their day, and only then deciding what features the product needed to support it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">02</div>
+          <div class="label">Role &amp;<br/>Team</div>
+          <div class="body">
+            <h2>One of seven, leading the surfaces that set the tone.</h2>
+            <p>I was one of four UX desktop designers (with Cori Dymond, Megan Lui, and Faith Furlough), partnered with three UX mobile designers (Jayson McCauliff, Soumo Karar, Phoebe Dyloco). Within that team, my work spanned:</p>
+            <ul class="bullet">
+              <li>Authoring research and discovery proposals.</li>
+              <li>Leading and conducting user interviews across clinical roles.</li>
+              <li>Collaborating on research synthesis and developing personas.</li>
+              <li>Leading feature wireframe explorations for the <strong>Dashboard</strong> and <strong>Visit List</strong>, two of the most-trafficked surfaces in the EHR.</li>
+              <li>Designing the <strong>My Profile</strong> modal, the <strong>For Me</strong> homepage, Account Authorization and Creation, Clinical Notes, Medications, and more.</li>
+              <li>Collaborating on finalized visual design and stakeholder presentations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">03</div>
+          <div class="label">Discovery</div>
+          <div class="body">
+            <h2>Audit our own product. Then study the field.</h2>
+            <p>The process started with extensive research on the existing EHR's functionality, paired with secondary research across our competitors. Goal: a clear-eyed view of the gaps and the opportunities.</p>
+
+            <h3>Secondary research</h3>
+            <p>Compiled the existing data we had on our own EHR and dove into competitors across every platform we could observe.</p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/ikm4%20competitve%20reserach.png" alt="Competitive research mapping iKnowMed against OncoEMR, Epic Beacon, and other oncology EHRs" loading="lazy" />
+            </div>
+
+            <h3>Users and stakeholders</h3>
+            <p>The clinical team using an oncology EHR isn't one user, it's many: physicians, nurses, schedulers, front desk, billing, admin. Each has a different relationship with the product. Identifying every role and how they interacted with the system was essential before any wireframe got drawn.</p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/iKM4-users-stakeholders.jpg" alt="Map of user roles and stakeholders inside the iKnowMed ecosystem" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">04</div>
+          <div class="label">Define &amp;<br/>ideate</div>
+          <div class="body">
+            <h2>Personas, workflows, and what to ship first.</h2>
+            <p>Started with user interviews across every clinical role. Mapped current-state workflows and future strategy plans. Because the team using an EHR has wildly different goals depending on where they sit in the clinic, we built personas that anchored every decision back to a real role.</p>
+
+            <h3>User profile exploration</h3>
+            <p>Mapping the personas across roles, so every design decision could anchor back to a real user.</p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/ikm4-User-Profile-exploration.png" alt="User profile exploration mapping personas across clinical roles" loading="lazy" />
+            </div>
+
+            <h3>Mapping the workflow</h3>
+            <p>Treatment phases and follow-up workflows mapped end-to-end, so design decisions could be tied back to the real clinical sequence rather than the existing feature taxonomy.</p>
+
+            <div class="mockup mockup--md" style="aspect-ratio: 6302 / 3163;">
+              <img src="../images/ikm4-diagram-Treatment%20Phase.png" alt="Diagram of the oncology treatment phase workflow" loading="lazy" />
+            </div>
+            <div class="mockup mockup--md" style="margin-top: 24px; aspect-ratio: 5484 / 1265;">
+              <img src="../images/ikm4-Clinical%20Workflow%20-%20Follow%20Up.png" alt="Diagram of the clinical follow-up workflow" loading="lazy" />
+            </div>
+
+            <h3>Feature dependency</h3>
+            <p>Because this was a redesign of a working EHR (not a greenfield project), understanding which features depended on which others was essential to staging design and engineering work without breaking the product mid-flight.</p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/ikm4-feature%20design%20dependcy%20diagram%20.png" alt="Feature design dependency diagram for the iKnowMed redesign" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">05</div>
+          <div class="label">Design &amp;<br/>delivery</div>
+          <div class="body">
+            <h2>Rethinking the surfaces clinicians live in.</h2>
+
+            <h3>The Dashboard</h3>
+            <p>I led this feature with one purpose: rethinking what an EHR dashboard could be. Not a dumping ground of widgets, but a true entry point that surfaces what each user needs based on their role and the day's clinical reality. The exploration moved through a singular dashboard pattern, then a split practice-and-personal dashboard pattern, and finally a focused, role-aware design.</p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/iKM4-%20Dashboard-exploration.jpg" alt="Dashboard exploration showing alternative information architectures" loading="lazy" />
+            </div>
+            <div class="mockup mockup--md" style="margin-top: 24px;">
+              <img src="../images/ikm4-Dashboard1-editting.png" alt="Final dashboard design with editing affordances" loading="lazy" />
+            </div>
+
+            <h3>The Visit List</h3>
+            <p>Leading exploration and design for the Visit List, I focused on the user's goals and needs and what they actually need to know to accomplish their tasks, not what the system happened to track.</p>
+
+            <div class="mockup mockup--md">
+              <video src="../images/ikm4-visit-list.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Walkthrough of the iKnowMed Visit List feature"></video>
+            </div>
+
+            <h3>Design principles</h3>
+            <p>We established a small set of principles that guided every decision across the redesign, so the work stayed cohesive even as the team scaled across surfaces and time zones.</p>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">06</div>
+          <div class="label">Final<br/>walkthrough</div>
+          <div class="body">
+            <h2>The redesign in motion.</h2>
+            <p>A walkthrough of the final design across two clinical roles: front desk checking a patient in, and a scheduler checking a patient out. Video direction by Cori Dymond, voiceover by me.</p>
+
+            <div class="mockup mockup--md">
+              <video src="../images/iKM4_Video_Final.mp4" controls muted playsinline preload="metadata" aria-label="Walkthrough video of the iKnowMed redesign"></video>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">07</div>
+          <div class="label">Outcomes</div>
+          <div class="body">
+            <h2>Functionality and form, both.</h2>
+            <p>The redesign delivered the functionality Ontada needed (reporting, interoperability, alignment with Clinical Trials and Precision Medicine strategy), revised the core workflows (scheduling, noting), reorganized the structure and navigation, and produced new design-driven experiences for surfaces that had been treated as utilities for years.</p>
+
+            <div class="outcomes">
+              <div class="outcome">
+                <div class="v">7</div>
+                <div class="l">UX designers across desktop and mobile, working as one team.</div>
+              </div>
+              <div class="outcome">
+                <div class="v">2</div>
+                <div class="l">Flagship surfaces I led end-to-end (Dashboard and Visit List).</div>
+              </div>
+              <div class="outcome">
+                <div class="v">6<span class="sym">+</span></div>
+                <div class="l">Additional features I designed across the redesign.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-section">
+          <div class="num">08</div>
+          <div class="label">Reflection</div>
+          <div class="body">
+            <h2>Time for the future vision was the gift.</h2>
+            <p>Most product redesigns get squeezed by next-quarter pressure. This one didn't. Being able to dedicate real time toward the future vision (instead of incremental wins on top of the existing surface) was a rare gift. It let me push limits and rethink what an EHR could feel like with the user in mind, not the feature backlog.</p>
+            <p>What I'd carry forward: starting with the workflow, then deciding what features serve it, instead of the other way around. That sequencing is the difference between a product that gets used and a product that gets endured.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cs-next">
+      <div class="container">
+        <a href="family-hub.html">
+          <div>
+            <div class="label">Next case study · 03 / 04</div>
+            <div class="title">Family Hub · Stop scrolling. Start finding. <span class="italic-accent">→</span></div>
+          </div>
+          <div></div>
+          <span class="muted">2026</span>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <span class="eyebrow reveal">Get in touch</span>
+        <div class="reveal mt-6">
+          <a href="mailto:lisarichter1213@gmail.com" class="big-link">Let's&nbsp;build<br />something&nbsp;<span class="italic-accent">good.</span></a>
+        </div>
+        <div class="contact-grid reveal">
+          <div class="item"><div class="k">Email</div><a class="v" href="mailto:lisarichter1213@gmail.com">lisarichter1213@gmail.com</a></div>
+          <div class="item"><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/lisa-richter" target="_blank" rel="noopener">/in/lisa-richter ↗</a></div>
+          <div class="item"><div class="k">Phone</div><a class="v" href="tel:8646316264">(864) 631-6264</a></div>
+          <div class="item"><div class="k">Based in</div><div class="v">Greenville, SC · Remote-friendly</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 Lisa Richter</div>
+    <div><a href="../index.html">Back home →</a></div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+  <script>
+    (function () {
+      var gate = document.querySelector('[data-gate]');
+      if (!gate) return;
+      if (sessionStorage.getItem('lr_authed') === 'true') {
+        gate.style.display = 'none';
+        return;
+      }
+      var form = document.querySelector('[data-gate-form]');
+      var input = document.querySelector('[data-gate-input]');
+      var err = document.querySelector('[data-gate-error]');
+      if (input) setTimeout(function () { input.focus(); }, 50);
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value === '2026Richter') {
+          sessionStorage.setItem('lr_authed', 'true');
+          document.documentElement.classList.add('lr-authed');
+          gate.style.display = 'none';
+        } else {
+          err.hidden = false;
+          input.value = '';
+          input.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

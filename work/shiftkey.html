@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShiftKey, Re-envisioning the User's Profile · Lisa Richter</title>
+  <meta name="description" content="A redesign of the ShiftKey user profile to power the platform's expansion into Acute Care, and the surface behind the $16M monetization launch." />
+  <meta name="theme-color" content="#FAFAF7" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&display=swap" />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2394ABF9'/%3E%3C/svg%3E" />
+  <script>
+    if (sessionStorage.getItem('lr_authed') === 'true') {
+      document.documentElement.classList.add('lr-authed');
+    }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- Password gate -->
+  <div class="lr-gate" data-gate>
+    <div class="lr-gate-card">
+      <span class="lr-gate-eyebrow">Protected case study</span>
+      <h1 class="lr-gate-title">A few <span class="italic-accent">behind-the-scenes</span> details.</h1>
+      <p class="lr-gate-sub">Enter the password to view the case study.</p>
+      <form class="lr-gate-form" data-gate-form>
+        <input type="password" class="lr-gate-input" data-gate-input placeholder="Password" required aria-label="Password" autocomplete="off" />
+        <button type="submit" class="btn btn-primary">Unlock <span class="arrow">→</span></button>
+      </form>
+      <p class="lr-gate-error" data-gate-error hidden>That's not the password. Try again.</p>
+      <p class="lr-gate-help">Need the password? <a href="mailto:lisarichter1213@gmail.com?subject=Portfolio password">Reach out</a>.</p>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="../index.html" class="nav-brand"><span class="dot" aria-hidden="true"></span>Lisa Richter</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../creative.html">Creative</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ CASE STUDY HERO ============ -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">Case Study · 01 / 03</span>
+        </div>
+
+        <h1 class="reveal mt-6" style="max-width: 18ch;">
+          Re-envisioning the user's <span class="italic-accent">profile.</span>
+        </h1>
+
+        <p class="lede reveal mt-6" style="max-width: 60ch;">
+          When ShiftKey expanded into Acute Care, the existing profile couldn't carry the weight. We rebuilt the surface from scratch and split it into two: one for users in onboarding, one for users actively working shifts.
+        </p>
+
+        <div class="cs-meta-row reveal">
+          <div></div>
+          <div>
+            <div class="k">Company</div>
+            <div class="v">ShiftKey</div>
+          </div>
+          <div>
+            <div class="k">Role</div>
+            <div class="v">Design lead, Onboarding &amp; Credentialing</div>
+          </div>
+          <div>
+            <div class="k">Timeline</div>
+            <div class="v">4 months</div>
+          </div>
+          <div>
+            <div class="k">Team</div>
+            <div class="v">Design, PM, Eng, Credentialing SMEs</div>
+          </div>
+        </div>
+
+        <div class="mockup mockup--md reveal">
+          <img src="../images/shiftkey-%20profile%20-%20hero.png" alt="Hero visual of the ShiftKey profile redesign" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 01 PROBLEM ============ -->
+    <section style="padding-top: 0;">
+      <div class="container">
+        <div class="cs-section">
+          <div class="num">01</div>
+          <div class="label">Problem &amp;<br/>Context</div>
+          <div class="body">
+            <h2>The profile couldn't keep up with the platform.</h2>
+            <p>
+              ShiftKey is a marketplace that connects healthcare facilities with licensed professionals to fill open shifts on demand. As the company moved into the Acute Care space, the existing profile was the bottleneck. It was outdated, lacked scalability for a new sector of healthcare workers, and didn't reflect the kind of trust an acute care facility needs to see before staffing a shift.
+            </p>
+            <p>
+              On top of that, onboarding conversion rates were dropping. New users were landing inside the same profile experience as fully active users, which meant they were being asked to wade through a surface designed for someone who already knew the platform.
+            </p>
+
+            <div class="callout">
+              <div class="label">The bet</div>
+              <p>The profile is the surface where users represent themselves to facilities. If we treated it as a strategic surface (not a settings page), we could rebuild trust on the user side and unlock the next stage of growth on the business side.</p>
+            </div>
+
+            <h3>Design goals &amp; objectives</h3>
+            <p>As the project evolved, we established a small set of goals that acted as the north star for every design decision, across Acute and Post Acute care, across Onboarding and Active users.</p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-goals-objectives.png" alt="Design goals and objectives for the ShiftKey profile redesign" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 ROLE -->
+        <div class="cs-section">
+          <div class="num">02</div>
+          <div class="label">Role &amp;<br/>Constraints</div>
+          <div class="body">
+            <h2>Design lead, end to end.</h2>
+            <p>
+              I led design across the Onboarding and Credentialing space, partnering with Product, Engineering, and credentialing subject matter experts. The constraints shaped the work:
+            </p>
+            <ul class="bullet">
+              <li><strong>Compliance.</strong> Healthcare credentialing has legal teeth. Every field has a downstream effect on whether a worker can legally take a shift.</li>
+              <li><strong>Two audiences, one product.</strong> A user in onboarding has different needs than a user already working shifts, but they live inside the same profile object.</li>
+              <li><strong>Conversion sensitivity.</strong> Onboarding is the leakiest part of any marketplace. We had to add scope without adding drop-off.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 03 PROCESS -->
+        <div class="cs-section">
+          <div class="num">03</div>
+          <div class="label">Discovery &amp;<br/>research</div>
+          <div class="body">
+            <h2>Audit, then study the field.</h2>
+            <p>
+              We started with an extensive product audit of our own profile, paired with secondary research across direct and indirect competitors. The goal: a clear-eyed view of the gaps and the opportunities, before any pixels.
+            </p>
+
+            <h3>Competitor research</h3>
+            <p>
+              Built a database of what competitors house in their profiles. Looked closely at what felt trustworthy, what felt efficient, what felt like a chore. Identifying patterns that other marketplaces had earned through repeat exposure was as valuable as identifying our own gaps.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shfitkey-profile-competitive-research.png" alt="Desktop competitor research mapping what other healthcare marketplaces include in their profiles" loading="lazy" />
+            </div>
+
+            <h3>Architecture audit and user stories</h3>
+            <p>
+              Mapped what our profile currently houses against what it needed to house. Then sorted every field into three buckets: <em>captured at account creation</em>, <em>captured during onboarding</em>, or <em>captured later as the user becomes active</em>. That sequencing decision was the spine of everything that came after.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-architecture-audit.jpg" alt="Architecture audit of the existing profile, mapping every field and its place in the user journey" loading="lazy" />
+            </div>
+
+            <div class="mockup mockup--md" style="margin-top: 24px;">
+              <img src="../images/shiftkey-Profile%20Architecture.png" alt="Profile architecture, the result of the audit, organized for the redesign" loading="lazy" />
+            </div>
+
+            <div class="mockup mockup--md" style="margin-top: 24px;">
+              <img src="../images/shiftkey-UserStories-Profile.png" alt="User stories anchoring the profile redesign" loading="lazy" />
+            </div>
+
+            <h3>Inspiration</h3>
+            <p>
+              Pulled from profiles outside our category that <em>made users want to keep going</em>. The brief: study experiences that feel whole, not transactional. Profiles where each completed step makes the next one feel earned.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-Profile%20Inspiration.png" alt="Inspiration board collecting profile patterns from inside and outside the healthcare category" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 KEY DECISIONS -->
+        <div class="cs-section">
+          <div class="num">04</div>
+          <div class="label">Key decisions<br/>&amp; tradeoffs</div>
+          <div class="body">
+            <h2>Two profiles. One platform.</h2>
+
+            <h3>The profile today</h3>
+            <p>
+              Before deciding what to change, we mapped exactly how the existing profile falls short of business and industry standards. Where users got stuck, where data went missing, where the surface stopped earning trust.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-profile-today.png" alt="Audit of the profile as it exists today, showing where it falls short of business and industry standards" loading="lazy" />
+            </div>
+
+            <h3>Introducing two types of profile</h3>
+            <p>
+              Our first task was identifying how the two profiles would be different and how they would eventually collide. The architecture had to support both states inside a single underlying data model.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-info-architecture.png" alt="Information architecture showing how the Onboarding Profile and the Active Profile relate inside one platform" loading="lazy" />
+            </div>
+
+            <h3>Decision 01, split the surface</h3>
+            <p>
+              The biggest call of the project: the profile shouldn't be one thing. We introduced two profile states, an <strong>Onboarding Profile</strong> for users still becoming active, and an <strong>Active Profile</strong> for users already working shifts. Same underlying data model, different visible surface depending on where a user is in their journey.
+            </p>
+
+            <h3>Decision 02, strip nav during onboarding</h3>
+            <p>
+              The Onboarding Profile removes the platform's full navigation, on purpose. New users are focused on one job, completing the requirements that make them eligible to work. Anything else is noise at that stage.
+            </p>
+
+            <h3>Decision 03, sequence by SMEs, not by data model</h3>
+            <p>
+              The order in which onboarding tasks appear is driven by ShiftKey's credentialing subject matter experts, not by what's easiest to engineer. Completing one task unlocks the next, mirroring the actual gating logic of healthcare credentialing.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-layout-ideas.png" alt="Layout exploration during the ideation phase" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 FINAL DESIGN -->
+        <div class="cs-section">
+          <div class="num">05</div>
+          <div class="label">Final design</div>
+          <div class="body">
+            <h2>Two surfaces. <span class="italic-accent">Both load-bearing.</span></h2>
+
+            <h3>The Onboarding Profile</h3>
+            <p>
+              A focused surface that walks new users step-by-step through every requirement to become an active provider. Full transparency into what's needed, no platform navigation to distract from the task at hand. Each completed item unlocks the next, in an order set by credentialing SMEs.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-Onboarder%20Prof.png" alt="The Onboarding Profile, a step-by-step onboarding surface for new users" loading="lazy" />
+            </div>
+
+            <h3>The Active Profile</h3>
+            <p>
+              For users already working shifts, the Active Profile is a cohesive surface that personalizes their experience, ensures their eligibility is current, and gives facilities a real glimpse of who they're staffing. Completion isn't a hurdle here, it's the thing that unlocks more shifts and better matches.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/shiftkey-final%20profile.png" alt="The final Active Profile design" loading="lazy" />
+            </div>
+
+            <h3>Motion and interaction</h3>
+            <p>
+              Short walkthrough of how the profile responds to user actions in the wild.
+            </p>
+
+            <div class="mockup mockup--md">
+              <video src="../images/Shiftkey-profile-video-interaction.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Video walkthrough of the ShiftKey profile interactions"></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 OUTCOMES -->
+        <div class="cs-section">
+          <div class="num">06</div>
+          <div class="label">Measurable<br/>outcomes</div>
+          <div class="body">
+            <h2>Wins on both sides of the experience.</h2>
+
+            <p>The redesign delivered measurable change on the surfaces that mattered most: users moved through onboarding faster, completed it more often, and felt better about what they were doing while they did it.</p>
+
+            <div class="outcomes outcomes--two">
+              <div class="outcome">
+                <div class="v"><span class="arrow-indicator arrow-indicator--up" aria-hidden="true">↑</span></div>
+                <div class="l">Increase in user satisfaction and onboarding completion rates.</div>
+              </div>
+              <div class="outcome">
+                <div class="v"><span class="arrow-indicator arrow-indicator--down" aria-hidden="true">↓</span></div>
+                <div class="l">Decrease in time spent onboarding and overall user confusion.</div>
+              </div>
+            </div>
+
+            <p>Beyond those direct measures, the work was the foundation for ShiftKey's broader push into Acute Care, the kind of follow-on impact that doesn't show up in a single conversion metric but compounds across quarters and segments.</p>
+          </div>
+        </div>
+
+        <!-- 07 REFLECTION -->
+        <div class="cs-section">
+          <div class="num">07</div>
+          <div class="label">Reflection</div>
+          <div class="body">
+            <h2>What I'd do again.</h2>
+            <p>
+              The single biggest call was splitting the profile into two states. It came out of a design instinct early in the project, but it took a real partnership with the product team to ship. I'm grateful they saw the vision when I pitched it, because in hindsight it's the move that made everything else possible.
+            </p>
+            <p>
+              I'd also keep the same approach to sequencing. Letting credentialing SMEs drive task order (instead of an internal preference for what was easiest to build) made the experience match how healthcare credentialing actually works, which is the only way trust gets earned with users in this space.
+            </p>
+            <p>
+              What I'd push harder on next time, getting analytics design in on day one. By the time we had post-launch data, I wanted finer-grained event tracking than we'd planned for. A small upfront investment there would have made the post-mortem sharper.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ NEXT ============ -->
+    <section class="cs-next">
+      <div class="container">
+        <a href="iknowmed.html">
+          <div>
+            <div class="label">Next case study · 02 / 04</div>
+            <div class="title">Ontada · iKnowMed Oncology EHR <span class="italic-accent">→</span></div>
+          </div>
+          <div></div>
+          <span class="muted">2020-2022</span>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <span class="eyebrow reveal">Get in touch</span>
+        <div class="reveal mt-6">
+          <a href="mailto:lisarichter1213@gmail.com" class="big-link">Let's&nbsp;build<br />something&nbsp;<span class="italic-accent">good.</span></a>
+        </div>
+        <div class="contact-grid reveal">
+          <div class="item">
+            <div class="k">Email</div>
+            <a class="v" href="mailto:lisarichter1213@gmail.com">lisarichter1213@gmail.com</a>
+          </div>
+          <div class="item">
+            <div class="k">LinkedIn</div>
+            <a class="v" href="https://www.linkedin.com/in/lisa-richter" target="_blank" rel="noopener">/in/lisa-richter ↗</a>
+          </div>
+          <div class="item">
+            <div class="k">Phone</div>
+            <a class="v" href="tel:8646316264">(864) 631-6264</a>
+          </div>
+          <div class="item">
+            <div class="k">Based in</div>
+            <div class="v">Greenville, SC · Remote-friendly</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 Lisa Richter</div>
+    <div><a href="../index.html">Back home →</a></div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+  <script>
+    (function () {
+      var gate = document.querySelector('[data-gate]');
+      if (!gate) return;
+      if (sessionStorage.getItem('lr_authed') === 'true') {
+        gate.style.display = 'none';
+        return;
+      }
+      var form = document.querySelector('[data-gate-form]');
+      var input = document.querySelector('[data-gate-input]');
+      var err = document.querySelector('[data-gate-error]');
+      if (input) setTimeout(function () { input.focus(); }, 50);
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value === '2026Richter') {
+          sessionStorage.setItem('lr_authed', 'true');
+          document.documentElement.classList.add('lr-authed');
+          gate.style.display = 'none';
+        } else {
+          err.hidden = false;
+          input.value = '';
+          input.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

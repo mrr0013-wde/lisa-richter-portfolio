@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Family Hub, Stop Scrolling. Start Finding. · Lisa Richter</title>
+  <meta name="description" content="A concept redesign of Family Hub, the daycare communication app from Goddard Schools. Replacing an infinite-scroll feed with calendar-first navigation." />
+  <meta name="theme-color" content="#FAFAF7" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..700&display=swap" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2394ABF9'/%3E%3C/svg%3E" />
+  <script>
+    if (sessionStorage.getItem('lr_authed') === 'true') {
+      document.documentElement.classList.add('lr-authed');
+    }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- Password gate -->
+  <div class="lr-gate" data-gate>
+    <div class="lr-gate-card">
+      <span class="lr-gate-eyebrow">Protected case study</span>
+      <h1 class="lr-gate-title">A few <span class="italic-accent">behind-the-scenes</span> details.</h1>
+      <p class="lr-gate-sub">Enter the password to view the case study.</p>
+      <form class="lr-gate-form" data-gate-form>
+        <input type="password" class="lr-gate-input" data-gate-input placeholder="Password" required aria-label="Password" autocomplete="off" />
+        <button type="submit" class="btn btn-primary">Unlock <span class="arrow">→</span></button>
+      </form>
+      <p class="lr-gate-error" data-gate-error hidden>That's not the password. Try again.</p>
+      <p class="lr-gate-help">Need the password? <a href="mailto:lisarichter1213@gmail.com?subject=Portfolio password">Reach out</a>.</p>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="../index.html" class="nav-brand"><span class="dot" aria-hidden="true"></span>Lisa Richter</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../creative.html">Creative</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Case Study · 03 / 03 · Independent</span>
+
+        <h1 class="reveal mt-6" style="max-width: 18ch;">
+          Stop scrolling. <span class="italic-accent">Start finding.</span>
+        </h1>
+
+        <p class="lede reveal mt-6" style="max-width: 60ch;">
+          A concept redesign of Family Hub, the daycare communication app used by parents at Goddard Schools, that replaces an infinite-scroll feed with calendar-first navigation.
+        </p>
+
+        <div class="cs-meta-row reveal">
+          <div></div>
+          <div>
+            <div class="k">Type</div>
+            <div class="v">Independent · concept</div>
+          </div>
+          <div>
+            <div class="k">Role</div>
+            <div class="v">Design + prototype</div>
+          </div>
+          <div>
+            <div class="k">Tools</div>
+            <div class="v">Figma · FigmaMCP · Claude</div>
+          </div>
+          <div>
+            <div class="k">Audience</div>
+            <div class="v">Parents of daycare-age kids</div>
+          </div>
+        </div>
+
+        <div class="mockup mockup--md reveal">
+          <video src="../images/FamilyHub-Updated-hero-video.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Family Hub redesign, concept walkthrough"></video>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 0;">
+      <div class="container">
+
+        <!-- 01 PROBLEM -->
+        <div class="cs-section">
+          <div class="num">01</div>
+          <div class="label">The problem</div>
+          <div class="body">
+            <h2>Parents can't find what they need.</h2>
+            <p>
+              Family Hub tracks meals, naps, diapers, photos, and messages from every daycare day. All of it gets dumped into a single infinite-scroll feed with no way to navigate by date. A parent who wants to check what their toddler ate last Tuesday has to scroll through days of entries to find a single meal log.
+            </p>
+            <p>The app has the data. It just doesn't have a navigation model.</p>
+
+            <h3>Three pain points the feed creates</h3>
+            <ul class="bullet">
+              <li><strong>Endless scrolling.</strong> Every activity (meals, naps, photos, messages) lives in one stream. Finding past entries means scrolling through days of content.</li>
+              <li><strong>No date navigation.</strong> There's no calendar, no date picker. You can't jump to a specific day.</li>
+              <li><strong>Meals lost in noise.</strong> Meal details and allergen info are mixed in with photos and school newsletters, so the things parents check most urgently are the hardest to find.</li>
+            </ul>
+
+            <div class="callout">
+              <div class="label">Hypothesis</div>
+              <p>The right primitive isn't a feed. It's a calendar, with the feed nested inside each day. Same content, different shape.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 SOLUTION -->
+        <div class="cs-section">
+          <div class="num">02</div>
+          <div class="label">The solution</div>
+          <div class="body">
+            <h2>Calendar-first navigation.</h2>
+            <p>
+              Replace the infinite feed with a date-organized daily view. A calendar strip lets parents tap any day to instantly see that day's activities, grouped by category: meals, naps, diapers, and photos.
+            </p>
+            <ul class="bullet">
+              <li><strong>Browse by day.</strong> Week strip plus full calendar. Tap any date to see that day's report.</li>
+              <li><strong>Glanceable stats.</strong> Quick-view cards show meal count, nap duration, and diaper count at a glance.</li>
+              <li><strong>Grouped sections.</strong> Collapsible categories so parents find what they need without scrolling.</li>
+            </ul>
+
+            <div class="mockup mockup--md">
+              <img src="../images/FamilyHub-calendarview.png" alt="Calendar view of the Family Hub redesign showing daily activities grouped by category" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 KEY FEATURES -->
+        <div class="cs-section">
+          <div class="num">03</div>
+          <div class="label">Key features</div>
+          <div class="body">
+            <h2>Designed around daily routines.</h2>
+
+            <h3>Calendar navigation</h3>
+            <p>
+              A week strip with teal dots indicating days with data. Tap the month label to open a full calendar for jumping to any date. No more scrolling to find last Tuesday.
+            </p>
+
+            <h3>At-a-glance stats</h3>
+            <p>
+              Three quick-view cards at the top of each day: meal count, nap duration, and diaper changes. Parents get the summary before diving into details.
+            </p>
+
+            <h3>Organized meal tracking</h3>
+            <p>
+              Every meal logged with time, description, and allergen tags (like <em>"contains gluten"</em>) clearly highlighted. Grouped under a collapsible Meals section, tap to expand.
+            </p>
+
+            <h3>Photos by day</h3>
+            <p>
+              Photos are grouped by the day they were taken, not lost in a stream. Each day's photos appear in a dedicated section with captions.
+            </p>
+
+            <h3>Design principles</h3>
+            <p>
+              The principles that guided every decision across the redesign, from layout choices to copy.
+            </p>
+
+            <div class="mockup mockup--md">
+              <img src="../images/Family%20Hub-principles.png" alt="Design principles guiding the Family Hub redesign" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 BEFORE AFTER -->
+        <div class="cs-section">
+          <div class="num">04</div>
+          <div class="label">Before &amp; after</div>
+          <div class="body">
+            <h2>A side-by-side comparison.</h2>
+            <p>
+              On the left, the existing app. An endless scroll mixing every event type. <em>"Just walking by!"</em> sits next to <em>"PM Snack 3:15pm"</em> next to a Daily Sheet PDF, with no way to scope down.
+            </p>
+            <p>
+              On the right, the redesign. A single screen titled <strong>Theo's Day</strong>, with quick stats up top and clean, expandable sections below. Same content, completely different mental model.
+            </p>
+
+            <div class="mockup mockup--md">
+              <video src="../images/FamilyHub-comparisonvideo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Animated before and after comparison of the Family Hub redesign"></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 INFORMATION ARCHITECTURE -->
+        <div class="cs-section">
+          <div class="num">05</div>
+          <div class="label">Information<br/>architecture</div>
+          <div class="body">
+            <h2>From chaos to clarity.</h2>
+            <p>The IA shift is the heart of the redesign. Same data, restructured for how parents actually use it.</p>
+
+            <h3>Before</h3>
+            <ul class="bullet">
+              <li><strong>Infinite feed (all types mixed):</strong> photos, naps, meals, diapers, daily sheets, newsletters. No filtering, no date navigation.</li>
+              <li><strong>Threaded list:</strong> attendance, send notes.</li>
+              <li><strong>Settings:</strong> profile and notifications.</li>
+            </ul>
+
+            <h3>After</h3>
+            <ul class="bullet">
+              <li><strong>Calendar + daily view:</strong> week strip (tap any day), full calendar (tap month), quick stats row, then collapsible sections for meals, naps, diapers, photos, plus the Daily Sheet link.</li>
+              <li><strong>Threaded list:</strong> same (attendance, notes preserved).</li>
+              <li><strong>Settings &amp; toggles:</strong> unchanged.</li>
+            </ul>
+
+            <div class="callout">
+              <div class="label">Design principle</div>
+              <p>Don't move the screens that already work. Restructure only the surface that's broken (the feed) and leave the rest alone.</p>
+            </div>
+
+            <div class="mockup mockup--md">
+              <img src="../images/Family%20Hub-architecture.png" alt="Information architecture for the Family Hub redesign, mapping the move from infinite feed to calendar-first navigation" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 OUTCOMES -->
+        <div class="cs-section">
+          <div class="num">06</div>
+          <div class="label">What the<br/>redesign achieves</div>
+          <div class="body">
+            <h2>Three measurable wins.</h2>
+
+            <ul class="bullet">
+              <li><strong>Calendar views added.</strong> Parents can now navigate by date, a feature the existing app completely lacked.</li>
+              <li><strong>Less scrolling.</strong> A daily view replaces the infinite feed, reducing cognitive load and scroll fatigue.</li>
+              <li><strong>To find a meal:</strong> tap a date, expand Meals. Allergen tags are immediately visible. The thing parents check most often is now the easiest thing to find.</li>
+            </ul>
+
+            <div class="mockup mockup--md">
+              <img src="../images/FamilyHub-conclusion.png" alt="Summary of what the Family Hub redesign achieves" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 NEXT -->
+        <div class="cs-section">
+          <div class="num">07</div>
+          <div class="label">What I'd<br/>explore next</div>
+          <div class="body">
+            <h2>Where this goes after the concept.</h2>
+            <ul class="bullet">
+              <li><strong>Usability testing</strong> with real parents to validate the calendar-first model against the existing feed pattern they're already used to.</li>
+              <li><strong>Weekly and monthly summary views</strong> showing trends in sleep, meals, and growth, so parents see patterns, not just isolated days.</li>
+              <li><strong>Smart notifications</strong> like <em>"Theo just had lunch"</em> with a direct link to that day's detail.</li>
+              <li><strong>Multi-child support</strong> for families with more than one child in care.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cs-next">
+      <div class="container">
+        <a href="../index.html#work">
+          <div>
+            <div class="label">Back to all work</div>
+            <div class="title">See all three case studies <span class="italic-accent">→</span></div>
+          </div>
+          <div></div>
+          <span class="muted">2019-2026</span>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <span class="eyebrow reveal">Get in touch</span>
+        <div class="reveal mt-6">
+          <a href="mailto:lisarichter1213@gmail.com" class="big-link">Let's&nbsp;build<br />something&nbsp;<span class="italic-accent">good.</span></a>
+        </div>
+        <div class="contact-grid reveal">
+          <div class="item"><div class="k">Email</div><a class="v" href="mailto:lisarichter1213@gmail.com">lisarichter1213@gmail.com</a></div>
+          <div class="item"><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/lisa-richter" target="_blank" rel="noopener">/in/lisa-richter ↗</a></div>
+          <div class="item"><div class="k">Phone</div><a class="v" href="tel:8646316264">(864) 631-6264</a></div>
+          <div class="item"><div class="k">Based in</div><div class="v">Greenville, SC · Remote-friendly</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 Lisa Richter</div>
+    <div><a href="../index.html">Back home →</a></div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+  <script>
+    (function () {
+      var gate = document.querySelector('[data-gate]');
+      if (!gate) return;
+      if (sessionStorage.getItem('lr_authed') === 'true') {
+        gate.style.display = 'none';
+        return;
+      }
+      var form = document.querySelector('[data-gate-form]');
+      var input = document.querySelector('[data-gate-input]');
+      var err = document.querySelector('[data-gate-error]');
+      if (input) setTimeout(function () { input.focus(); }, 50);
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value === '2026Richter') {
+          sessionStorage.setItem('lr_authed', 'true');
+          document.documentElement.classList.add('lr-authed');
+          gate.style.display = 'none';
+        } else {
+          err.hidden = false;
+          input.value = '';
+          input.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
